@@ -1,23 +1,64 @@
 aid: biplus
+
 name: Biplus
-description: 'Biplus is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://biplus.com.vn/assets/image/meta-image.png
+
+description: 'Biplus is a Vietnam‑based software solutions and IT outsourcing company offering custom software development, Atlassian partnership, AI‑tailored solutions, and consulting services across telecommunications, finance, e‑commerce, and fintech sectors. It provides enterprise‑grade development, personnel outsourcing, and SaaS integration, positioning itself as a trusted partner for digital transformation.'
+
 url: https://raw.githubusercontent.com/api-evangelist/biplus/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: OpenAPI endpoints returned HTML pages instead of machine‑readable specs.
+  evidence:
+    - url: https://biplus.com.vn/openapi.json
+      status: 200
+  checked: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Software
+- IT Outsourcing
+- Vietnam
+- AI
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/biplus-hosts.yml
+- type: Vendors
+  url: vendors/biplus-vendors.yml
+- type: Blog
+  url: https://biplus.com.vn/blog
+- type: DomainSecurity
+  url: security/biplus-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/biplus
+  url: https://biplus.com.vn
+
+apis: []
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
